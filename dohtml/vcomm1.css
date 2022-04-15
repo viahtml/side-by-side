@@ -1,0 +1,154 @@
+vcomm1 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "image-topper"
+    "search-bar"
+    "msgs"
+    "menu-bar";
+  grid-template-rows: auto auto auto auto;
+  grid-gap:20px;
+  margin:10px auto;
+  padding:30px;
+  width:410px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vcomm1 image-block {
+  grid-area:image-topper;
+  position:relative;
+}
+
+vcomm1 image-topper {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+vcomm1 image-topper img {
+  width:60px;
+  height:60px;
+  border-radius:10px;
+}
+
+vcomm1 image-topper image-block span {
+  position:absolute;
+  top:-10px;
+  left:-10px;
+  aspect-ratio: 1 / 1;
+  padding:7px;
+  background: hsl(var(--mghue2), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+  border-radius:100%;
+}
+
+vcomm1 image-topper i {
+  aspect-ratio: 1 / 1;
+  font-size:13px;
+}
+
+vcomm1 contact-block {
+  font:600 20px var(--sans);
+}
+
+vcomm1 contact-block u {
+ text-decoration-color: var(--fontaccent3);
+}
+
+vcomm1 search-bar {
+  grid-area:search-bar;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
+  background:rgba(var(--bgelev3));
+  border-radius:10px;
+  font:300 10px var(--sans);
+  letter-spacing:1.15px;
+  text-transform:uppercase;
+}
+
+vcomm1 menu-bar {
+  grid-area:menu-bar;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-evenly;
+  align-items: center;
+  background:rgba(var(--bgelev3));
+  border-radius:20px;
+}
+
+vcomm1 menu-bar x {
+  text-transform:capitalize;
+  padding:7px 15px;
+  background:rgba(var(--bgelev3));
+  border-radius:20px;
+}
+
+vcomm1 menu-bar x.selected, vcomm1 menu-bar x:hover {
+  color:rgba(var(--bgelev1));
+  background: hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+}
+
+vcomm1 .msgs {
+  grid-area:msgs;
+  background:rgba(var(--bgelev1));
+  background-image: linear-gradient(to bottom right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  padding:20px;
+  border-radius:10px;
+}
+
+vcomm1 .msgs overflow {
+  display:block;
+  max-height:450px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+  padding:0 20px;
+  border-top:20px solid rgba(var(--bgelev1));
+  border-bottom:20px solid rgba(var(--bgelev1));
+  overflow:auto;
+}
+
+vcomm1 .msgs note {
+  display:block;
+  margin:3px;
+  font:600 12px var(--sans);
+  text-transform:uppercase;
+  text-align: center;
+}
+
+vcomm1 .msgs p {
+  float:left;
+  clear:both;
+  margin:5px 0;
+  padding:10px;
+  font:400 15px var(--sans);
+  background: hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+  border-radius:0 10px 10px 10px;
+}
+
+vcomm1 .msgs u, vcomm1 .msgs a {
+  font:800 17px var(--display);
+  text-transform:lowercase;
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent1);
+}
+
+vcomm1 .msgs send {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:10px;
+  padding:10px;
+  font: 13px var(--sans);
+  text-transform:uppercase;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
