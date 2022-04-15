@@ -1,0 +1,156 @@
+vreltracker2 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "topper relimage"
+    "relationship-desc relationship-desc"
+    "relationship-block relationship-block";
+  grid-template-rows:100px auto auto;
+  grid-template-columns: auto 100px;
+  grid-gap:20px;
+  padding:30px;
+  margin:0 auto;
+  width:600px;
+  border-radius:20px;
+  text-align: justify;
+  background:rgba(var(--bgelev1));
+  background-image: linear-gradient(to bottom right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+}
+
+vreltracker2 topper {
+    grid-area: topper;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-between;
+}
+
+vreltracker2 topper-detail {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(var(--bgelev1));
+  padding:15px;
+  border-radius:10px;
+}
+
+vreltracker2 topper span {
+  font:800 13px var(--sans);
+  text-transform:uppercase;
+  text-transform:1.15px;
+  border-bottom:2px solid var(--fontaccent2);
+}
+
+vreltracker2 topper i {
+  color:var(--fontaccent1);
+}
+
+vreltracker2 relimage {
+  grid-area:relimage;
+}
+
+vreltracker2 relimage img {
+  width:100px;
+  height:100px;
+  border-radius:10px;
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.15);
+}
+
+vreltracker2 .relationship-desc {
+  grid-area:relationship-desc;
+  padding:20px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vreltracker2 .relationship-block {
+  grid-area:relationship-block;
+  padding:20px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vreltracker2 b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vreltracker2 i {
+  color:var(--fontaccent1);
+}
+
+vreltracker2 u {
+  font:800 15px var(--display);
+  text-decoration-color:var(--fontaccent2);
+}
+
+vreltracker2 a {
+  font:800 13px var(--sans);
+  text-transform:uppercase;
+  color:var(--fontaccent3);
+  border-bottom: 2px solid rgba(var(--bgelev3));
+}
+
+vreltracker2 .relationship-block relationship {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "partnerimage partnername"
+    "desc desc";
+  grid-template-rows:90px auto;
+  grid-template-columns:90px auto;
+  grid-gap:10px;
+  margin:10px auto;
+  padding:20px;
+  background:rgba(var(--bgelev1));
+  background-image: linear-gradient(to top right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:10px;
+}
+
+vreltracker2 .relationship-block relationship partnerimage {
+  grid-area:partnerimage;
+}
+
+vreltracker2 .relationship-block relationship partnerimage img {
+  width:90px;
+  height:90px;
+  border-radius:10px;
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.15);
+}
+
+vreltracker2 .relationship-block relationship partnername {
+    grid-area: partnername;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-between;
+}
+
+vreltracker2 .relationship-block relationship partnername partner-detail {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(var(--bgelev1));
+  padding:10px;
+  border-radius:10px;
+}
+
+vreltracker2 .relationship-block relationship partnername partner-detail span {
+  font:800 13px var(--sans);
+  text-transform:uppercase;
+  text-transform:1.15px;
+  border-bottom:2px solid var(--fontaccent2);
+}
+
+vreltracker2 .relationship-block relationship partnername partner-detail i {
+  color:var(--fontaccent1);
+}
+
+vreltracker2 .relationship-block relationship .desc {
+  grid-area:desc;
+  padding:20px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
