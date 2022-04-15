@@ -1,0 +1,148 @@
+vsocial1 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "socialbanner"
+    "username"
+    "photoupdates";
+  grid-template-rows: auto auto auto;
+  grid-gap:20px;
+  margin:10px auto;
+  width:100%;
+  background:rgba(var(--bgelev1));
+  border-radius:20px;
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vsocial1 socialbanner, vsocial1 postbanner {
+  grid-area:socialbanner;
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content: center;
+  align-items: flex-end;
+  width:100%;
+  height:200px;
+}
+
+vsocial1 postbanner {
+  height:100px;
+}
+
+vsocial1 socialbanner img {
+  position:absolute;
+  align-self: auto;
+  bottom:-50px;
+  width:120px;
+  height:120px;
+  border:5px solid rgba(var(--bgelev1));
+  border-radius:20px;
+}
+
+vsocial1 postbanner img {
+  position:absolute;
+  left:30px;
+  bottom:-60px;
+  width:90px;
+  height:90px;
+  border:5px solid rgba(var(--bgelev1));
+  border-radius:20px;
+}
+
+vsocial1 username {
+  grid-area:username;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  margin-top:40px;
+}
+
+vsocial1 username-post {
+  position:absolute;
+  left:130px;
+  bottom:-50px;
+  display:flex;
+  flex-flow:column;
+}
+
+vsocial1 username span, vsocial1 username-post span {
+  text-transform: lowercase;
+  font:800 25px var(--display);
+  background:linear-gradient(to right, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vsocial1 username small, vsocial1 username-post small {
+  font: 600 11px var(--sans);
+  text-transform:uppercase;
+  letter-spacing: 1.15px;
+}
+
+vsocial1 photoupdates {
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-around;
+  align-items: center;
+  margin:30px;
+}
+
+vsocial1 photoupdates img {
+  width:90px;
+  height:90px;
+  border:5px solid var(--fontaccent3);
+  border-radius:20px;
+}
+
+vsocial1 .status {
+  margin:20px 30px 0;
+  padding:30px;
+  background:rgba(var(--bgelev2));
+  border-radius:20px;
+}
+
+vsocial1 .status:first-of-type {
+  margin-top:80px;
+}
+
+vsocial1 .status:last-of-type {
+  margin-bottom:40px;
+}
+
+vsocial1 .status img {
+  display:block;
+  width:540px;
+  margin:30px auto;
+  border:5px solid rgba(var(--bgelev3));
+  border-radius:20px;
+}
+
+vsocial1 iframe {
+  border-radius:5px;
+  margin:0px 0 20px;
+}
+
+vsocial1 .status b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent1);
+}
+
+vsocial1 .status i {
+  font:400 italic 15px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vsocial1 .status u {
+  font:800 20px var(--display);
+  text-decoration-color:var(--fontaccent3);
+}
+
+vsocial1 .status a {
+  font:800 11px var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 1.15px;
+  color:var(--fontaccent3);
+}
