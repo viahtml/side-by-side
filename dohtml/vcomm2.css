@@ -1,0 +1,176 @@
+vcomm2 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "phone-buttons"
+    "contact-details"
+    "msgs"
+    "menu-bar";
+  grid-template-rows: auto auto auto auto;
+  grid-gap:20px;
+  margin:10px auto;
+  padding:30px;
+  width:360px;
+  background: rgba(var(--bgelev1));
+  background-image: linear-gradient(to top right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:30px;
+  overflow:hidden;
+}
+
+vcomm2 phone-buttons {
+  position:relative;
+  grid-area:phone-buttons;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  font:500 10px var(--sans);
+  text-transform:uppercase;
+  z-index:2;
+}
+
+vcomm2 phone-buttons i {
+  margin:0 1px;
+}
+
+vcomm2 contact-details {
+  position:relative;
+  grid-area: contact-details;
+  display:flex;
+  flex-flow:column;
+  text-align:center;
+  z-index:2;
+}
+
+
+vcomm2 contact-details img {
+  border-radius:10px;
+  margin:20px auto;
+}
+
+vcomm2 contact-details img.circle {
+    width:90px;
+    height:90px;
+    border-radius:100%;
+}
+
+
+vcomm2 contact-details small {
+  font:400 11px var(--sans);
+  text-transform:uppercase;
+}
+
+vcomm2 contact-details span {
+  font: 800 25px var(--display);
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent2);
+}
+
+vcomm2 .msgs, vcomm2 .call {
+  position:relative;
+  grid-area:msgs;
+  z-index:2;
+}
+
+vcomm2 .msgs overflow, vcomm2 .call overflow {
+  display:block;
+  max-height:350px;
+  overflow:auto;
+}
+
+
+vcomm2 note {
+  display:block;
+  margin:3px;
+  font:600 12px var(--sans);
+  text-transform:uppercase;
+  text-align: center;
+}
+
+vcomm2 .msgs p, vcomm2 .call {
+  float:left;
+  clear:both;
+  margin:5px 0;
+  padding:10px;
+  font:400 15px var(--sans);
+  background: rgba(var(--bgelev1));
+  border-radius:0 10px 10px 10px;
+}
+
+vcomm2 .call {
+ border-radius:10px;
+}
+
+vcomm2 .msgs u, vcomm1 .msgs a, vcomm2 .call u, vcomm2 .call a {
+  font:800 17px var(--display);
+  text-transform:lowercase;
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent1);
+}
+
+vcomm2 .msgs b, vcomm2 .call b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vcomm2 .msgs i, vcomm2 .call i {
+  color:var(--fontaccent2);
+}
+
+vcomm2 menu-bar {
+  grid-area:menu-bar;
+  margin:40px 20px 0;
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-around;
+  /* background: rgba(var(--bgelev1)); */
+  padding:5px;
+  border-radius:50px;
+}
+
+vcomm2 menu-bar x {
+  margin:10px;
+  font-size:20px;
+}
+
+vcomm2 menu-bar x.selected {
+  position:absolute;
+  top:-50px;
+  aspect-ratio:1/1;
+  padding:10px;
+  background: rgba(var(--bgelev1));
+  background-image: linear-gradient(to top right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:70%;
+}
+
+vcomm2 menu-bar x.selected i {
+  background:rgba(var(--bgelev1));
+  padding:10px;
+  border-radius:100%;
+}
+
+.vblob1 {
+  position:absolute;
+  top:0;
+  left:0;
+  transform:rotate(180deg);
+  display: block;
+  width: 130%;
+  height: 1500px;
+  background: rgba(var(--bgelev1));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath d='M0,343L240,326.7C480,310,960,278,1440,294C1920,310,2400,376,2880,408.3C3360,441,3840,441,4320,400.2C4800,359,5280,278,5760,236.8C6240,196,6720,196,7200,212.3C7680,229,8160,261,8640,261.3C9120,261,9600,229,10080,179.7C10560,131,11040,65,11520,81.7C12000,98,12480,196,12960,236.8C13440,278,13920,261,14400,253.2C14880,245,15360,245,15840,220.5C16320,196,16800,147,17280,122.5C17760,98,18240,98,18720,138.8C19200,180,19680,261,20160,261.3C20640,261,21120,180,21600,155.2C22080,131,22560,163,23040,196C23520,229,24000,261,24480,302.2C24960,343,25440,392,25920,383.8C26400,376,26880,310,27360,285.8C27840,261,28320,278,28800,294C29280,310,29760,327,30240,326.7C30720,327,31200,310,31680,318.5C32160,327,32640,359,33120,310.3C33600,261,34080,131,34320,65.3L34560,0L34560,490L34320,490C34080,490,33600,490,33120,490C32640,490,32160,490,31680,490C31200,490,30720,490,30240,490C29760,490,29280,490,28800,490C28320,490,27840,490,27360,490C26880,490,26400,490,25920,490C25440,490,24960,490,24480,490C24000,490,23520,490,23040,490C22560,490,22080,490,21600,490C21120,490,20640,490,20160,490C19680,490,19200,490,18720,490C18240,490,17760,490,17280,490C16800,490,16320,490,15840,490C15360,490,14880,490,14400,490C13920,490,13440,490,12960,490C12480,490,12000,490,11520,490C11040,490,10560,490,10080,490C9600,490,9120,490,8640,490C8160,490,7680,490,7200,490C6720,490,6240,490,5760,490C5280,490,4800,490,4320,490C3840,490,3360,490,2880,490C2400,490,1920,490,1440,490C960,490,480,490,240,490L0,490Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.vblob2 {
+  position:absolute;
+  bottom:0;
+  right:0;
+  display: block;
+  width: 150%;
+  height: 1000px;
+  background: rgba(var(--bgelev1));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath d='M0,343L240,326.7C480,310,960,278,1440,294C1920,310,2400,376,2880,408.3C3360,441,3840,441,4320,400.2C4800,359,5280,278,5760,236.8C6240,196,6720,196,7200,212.3C7680,229,8160,261,8640,261.3C9120,261,9600,229,10080,179.7C10560,131,11040,65,11520,81.7C12000,98,12480,196,12960,236.8C13440,278,13920,261,14400,253.2C14880,245,15360,245,15840,220.5C16320,196,16800,147,17280,122.5C17760,98,18240,98,18720,138.8C19200,180,19680,261,20160,261.3C20640,261,21120,180,21600,155.2C22080,131,22560,163,23040,196C23520,229,24000,261,24480,302.2C24960,343,25440,392,25920,383.8C26400,376,26880,310,27360,285.8C27840,261,28320,278,28800,294C29280,310,29760,327,30240,326.7C30720,327,31200,310,31680,318.5C32160,327,32640,359,33120,310.3C33600,261,34080,131,34320,65.3L34560,0L34560,490L34320,490C34080,490,33600,490,33120,490C32640,490,32160,490,31680,490C31200,490,30720,490,30240,490C29760,490,29280,490,28800,490C28320,490,27840,490,27360,490C26880,490,26400,490,25920,490C25440,490,24960,490,24480,490C24000,490,23520,490,23040,490C22560,490,22080,490,21600,490C21120,490,20640,490,20160,490C19680,490,19200,490,18720,490C18240,490,17760,490,17280,490C16800,490,16320,490,15840,490C15360,490,14880,490,14400,490C13920,490,13440,490,12960,490C12480,490,12000,490,11520,490C11040,490,10560,490,10080,490C9600,490,9120,490,8640,490C8160,490,7680,490,7200,490C6720,490,6240,490,5760,490C5280,490,4800,490,4320,490C3840,490,3360,490,2880,490C2400,490,1920,490,1440,490C960,490,480,490,240,490L0,490Z'%3E%3C/path%3E%3C/svg%3E");
+}
