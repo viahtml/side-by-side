@@ -89,12 +89,12 @@ vcomm1 menu-bar x {
 }
 
 vcomm1 menu-bar x.selected, vcomm1 menu-bar x:hover {
-  color:rgba(var(--bgelev1));
+  color:var(--fontaccent1);
   background: hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
   background-blend-mode: var(--blendmode);
 }
 
-vcomm1 .msgs {
+vcomm1 .msgs, vcomm1 .call {
   grid-area:msgs;
   background:rgba(var(--bgelev1));
   background-image: linear-gradient(to bottom right, var(--pastelgradient1));
@@ -103,7 +103,7 @@ vcomm1 .msgs {
   border-radius:10px;
 }
 
-vcomm1 .msgs overflow {
+vcomm1 .msgs overflow, vcomm1 .call overflow {
   display:block;
   max-height:450px;
   background:rgba(var(--bgelev1));
@@ -133,14 +133,23 @@ vcomm1 .msgs p {
   border-radius:0 10px 10px 10px;
 }
 
-vcomm1 .msgs u, vcomm1 .msgs a {
+vcomm1 .msgs u, vcomm1 .msgs a, vcomm1 .call u, vcomm1 .call a {
   font:800 17px var(--display);
   text-transform:lowercase;
   text-decoration: underline;
   text-decoration-color: var(--fontaccent1);
 }
 
-vcomm1 .msgs send {
+vcomm1 .call b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vcomm1 .call i {
+  color:var(--fontaccent2);
+}
+
+vcomm1 .msgs send, vcomm1 .call send {
   display:flex;
   flex-flow:row;
   justify-content: space-between;
