@@ -1,0 +1,144 @@
+vcomm3 {
+  position:relative;
+  display:block;
+  margin:10px auto;
+  width:350px;
+  height:650px;
+  background: rgba(var(--bgelev1));
+  background-image: linear-gradient(to top right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:30px;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vcomm3 comm-top {
+  padding:30px;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+vcomm3 comm-top i {
+  font-size:20px;
+  color:rgba(var(--bgelev1));
+}
+
+vcomm3 vcomm3-inner {
+  position:absolute;
+  right:0;
+  bottom:0;
+  display:grid;
+  grid-template-areas:
+    "contact-name"
+    "msgs"
+    "send-buttons";
+  grid-template-rows: 30px 280px 30px;
+  gap:20px;
+  padding:30px;
+  width:90%;
+  height:430px;
+  background: rgba(var(--bgelev1));
+  border-radius:30px 0 0 0;
+}
+
+vcomm3 vcomm3-inner contact-name {
+  grid-area:contact-name;
+  display:flex;
+  flex-flow:row;
+  justify-content: center;
+  align-items: center;
+  font:800 17px var(--sans);
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent2);
+  text-decoration-style: wavy;
+}
+
+vcomm3 vcomm3-inner .msgs {
+  position:relative;
+  grid-area:msgs;
+  z-index:2;
+}
+
+vcomm3 vcomm3-inner .msgs overflow, vcomm vcomm3-inner .call overflow {
+  display:block;
+  overflow:auto;
+}
+
+vcomm3 note {
+  display:block;
+  margin:3px;
+  font:600 12px var(--sans);
+  text-transform:uppercase;
+  text-align: center;
+}
+
+vcomm3 .msgs p, vcomm3 .call {
+  float:left;
+  clear:both;
+  margin:5px 0;
+  padding:10px;
+  font:400 15px var(--sans);
+  background: hsl(var(--mghue2), calc(var(--mgsat2) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+  border-radius:0 10px 10px 10px;
+}
+
+vcomm3 .call {
+ border-radius:10px;
+}
+
+vcomm3 vcomm3-inner send-buttons {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+  padding:10px;
+  font:500 10px var(--sans);
+  text-transform:uppercase;
+  background: rgba(var(--bgelev3));
+  border-radius:30px;
+}
+
+vcomm3 vcomm3-inner send-buttons i {
+  margin:0 5px;
+}
+
+vcomm3 .msgs u, vcomm3 .msgs a, vcomm3 .call u, vcomm3 .call a {
+  font:800 17px var(--display);
+  text-transform:lowercase;
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent1);
+}
+
+vcomm3 .msgs b, vcomm3 .call b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vcomm3 .msgs i, vcomm3.call i {
+  color:var(--fontaccent2);
+}
+
+vcomm3 comm-noimage {
+  display:block;
+  font-size:50px;
+  text-align:center;
+}
+
+vcomm3 comm-noimage i {
+  padding:30px;
+  background:rgba(var(--bgelev1));
+  color:var(--fontaccent2);
+  border-radius:100%;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+}
+
+vcomm3 comm-noimage img {
+  width:100px;
+  height:100px;
+  border-radius:100%;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+}
