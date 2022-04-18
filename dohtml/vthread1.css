@@ -1,0 +1,68 @@
+vthread1 {
+  position:relative;
+  display:grid;
+  grid-template-rows: auto auto auto;
+  margin:10px auto;
+  width:450px;
+  background:rgba(var(--bgelev1));
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+  border-radius:20px;
+  overflow:hidden;
+}
+
+vthread1 tag {
+  position:relative;
+  justify-self: start;
+  padding:20px;
+  border-radius:20px 0 20px 0;
+  background: hsl(var(--mghue2), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+}
+
+vthread1 img {
+  position:relative;
+  margin:30px auto 0;
+  width:150px;
+  height:150px;
+  border-radius:20px;
+}
+
+vthread1 img.circle {
+  border-radius:100%;
+}
+
+vthread1 tag a {
+  font:800 13px var(--sans);
+  text-transform:uppercase;
+}
+
+vthread1 .writing {
+  margin:50px;
+  text-indent: 15px;
+}
+
+vthread1 .writing b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent1);
+}
+
+vthread1 .writing i {
+  font:600 15px var(--display);
+  color:var(--fontaccent2);
+}
+
+vthread1 .writing u {
+  font:800 15px var(--display);
+  text-decoration-color:var(--fontaccent2);
+}
+
+vthread1 .writing a {
+  font:800 11px var(--sans);
+  color:var(--fontaccent1);
+  text-transform:uppercase;
+  letter-spacing:1.15px;
+}
+
+vthread1 .writing overflow {
+  max-height:300px;
+}
