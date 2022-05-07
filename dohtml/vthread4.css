@@ -1,0 +1,113 @@
+vthread4 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "character-image"
+    "content"
+    "tag";
+  grid-template-rows: auto auto auto;
+  margin:10px auto;
+  width:350px;
+  background:rgba(var(--bgelev1));
+  background-image:linear-gradient(to bottom right, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:20px;
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vthread4 image-space {
+  position:relative;
+  padding:30px;
+  grid-area:character-image;
+  display:flex;
+  flex-flow:column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+vthread4 image-space lyr {
+  font:800 15px var(--sans);
+  color:var(--fontaccent2);
+  text-transform:lowercase;
+}
+
+vthread4 image-space small {
+  font:800 10px var(--sans);
+  color:var(--fontaccent3);
+  text-transform:uppercase;
+}
+
+vthread4 img.square {
+  width:70px;
+  height:70px;
+  border-radius:10px;
+}
+
+vthread4 img.circle {
+  width:70px;
+  height:70px;
+  border-radius:100%;
+}
+
+vthread4 icon {
+  position:absolute;
+  bottom:-30px;
+  right:30px;
+  aspect-ratio: 1 / 1;
+  padding:20px;
+  font-size:20px;
+  color:var(--fontaccent2);
+  background: hsl(var(--mghue2), calc(var(--mgsat2) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background-blend-mode: var(--blendmode);
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.25);
+  border-radius:100%;
+  z-index:9;
+}
+
+vthread4 tag {
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  margin:30px;
+  color:var(--fontaccent3);
+  font:800 13px var(--sans);
+  text-transform:uppercase;
+}
+
+vthread4 tag i {
+  font-size:20px;
+}
+
+vthread4 .writing {
+  position:relative;
+  background:rgba(var(--bgelev1));
+  padding:60px 40px 40px;
+}
+
+vthread4 overflow {
+  max-height:350px;
+  overflow:auto;
+}
+
+vthread4 b {
+  font:800 17px var(--sans);
+  color:var(--fontaccent1);
+}
+
+vthread4 i {
+  color:var(--fontaccent2);
+}
+
+vthread4 u {
+  font:800 17px var(--display);
+  text-decoration-color:var(--fontaccent3);
+}
+
+vthread4 a {
+  text-decoration: underline;
+  font:800 15px var(--sans);
+  text-decoration-color:var(--fontaccent1);
+}
