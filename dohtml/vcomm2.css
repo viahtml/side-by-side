@@ -81,6 +81,7 @@ vcomm2 .msgs overflow, vcomm2 .call overflow {
 
 
 vcomm2 note {
+  clear:both;
   display:block;
   margin:3px;
   font:600 12px var(--sans);
