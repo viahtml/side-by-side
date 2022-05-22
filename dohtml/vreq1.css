@@ -16,19 +16,20 @@ vreq1-in {
     flex-flow:column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding:20px;
+    padding:30px;
     background:linear-gradient(to bottom right, var(--pastelgradient1));
     border-radius:10px;
 }
 
 vreq1-title {
     grid-area:title;
-    margin:0 -20px;
-    padding:10px 20px;
+    margin:0 20px;
+    padding:20px;
     background:rgba(var(--bgelev1),1);
-    border-radius:0 10px 10px 0;
+    border-radius:10px;
     font:25px var(--display);
 }
+
 
 vreq1-title span {
     background-image: linear-gradient(to right, var(--fontgradient));
