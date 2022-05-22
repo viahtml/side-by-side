@@ -101,7 +101,7 @@ vreq2-in .character-body character {
   grid-gap:10px;
   margin-bottom:10px;
   padding:30px;
-  background: hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+  background: linear-gradient(to top right, var(--pastelgradient1));
   border-radius:10px;
 }
 
