@@ -1,0 +1,137 @@
+vreq1 {
+    position:relative;
+    display:block;
+    width:100%;
+    max-width:800px;
+    margin:10px auto;
+    padding:20px;
+    background:rgba(var(--bgelev1),1);
+    border-radius:10px;
+    text-align:justify;
+}
+
+vreq1-in {
+    position:relative;
+    display:flex;
+    flex-flow:column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:20px;
+    background:linear-gradient(to bottom right, var(--pastelgradient1));
+    border-radius:10px;
+}
+
+vreq1-title {
+    grid-area:title;
+    margin:0 -20px;
+    padding:10px 20px;
+    background:rgba(var(--bgelev1),1);
+    border-radius:0 10px 10px 0;
+    font:25px var(--display);
+}
+
+vreq1-title span {
+    background-image: linear-gradient(to right, var(--fontgradient));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(var(--bgelev1), 0);
+    text-transform:lowercase;
+    text-decoration-line: underline;
+    text-decoration-color: var(--fontaccent2);
+    text-decoration-style: wavy;
+}
+
+vreq1-in .content {
+    margin:20px;
+    padding:50px;
+    background:rgba(var(--bgelev2),1);
+    border-radius:10px;
+}
+
+vreq1-in vreq1-grid {
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    grid-gap:10px;
+    margin:0px 20px;
+}
+
+vreq1-grid character {
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-self: flex-start;
+    padding:15px;
+    background:rgba(var(--bgelev2),1);
+    height:250px;
+    border-radius:10px;
+}
+
+vreq1-grid character character-top {
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items:center;
+    font:800 17px var(--sans);
+    background-image: linear-gradient(to right, var(--fontgradient));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(var(--bgelev1), 0);
+    text-transform:lowercase;
+}
+
+vreq1-grid character img {
+    width:50px;
+    height:50px;
+    object-fit: cover;
+    object-position: center center;
+    padding:7px;
+    background:linear-gradient(to top right, var(--pastelgradient1));
+    border-radius:100%;
+}
+
+vreq1-grid character .description {
+    margin:10px;
+    padding:5px;
+    height:120px;
+    overflow:auto;
+}
+
+vreq1-grid character line {
+    margin:0 auto;
+    width:30%;
+    height:1px;
+    background: linear-gradient(to right, var(--pastelgradient1));
+}
+
+vreq1-grid character character-details {
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px;
+}
+
+vreq1-grid character character-details x {
+    background: hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--darken)));
+    color: var(--fontaccent1);
+    padding: 5px;
+    font:800 10px var(--sans);
+    text-transform:uppercase;
+    border-radius: 5px;
+}
+
+vreq1 b {
+    font:800 15px var(--sans);
+    color:var(--fontaccent2);
+}
+
+vreq1 i {
+    color:var(--fontaccent1);
+}
+
+vreq1 a {
+    font:600 14px var(--sans)!important;
+    color:var(--fontaccent2)!important;
+    text-decoration-line: underline!important;
+    text-decoration-color: var(--fontaccent2)!important;
+    text-decoration-style: wavy!important;
+}
