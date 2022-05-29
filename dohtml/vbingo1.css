@@ -1,0 +1,49 @@
+vbingo1 {
+  position:relative;
+  display:grid;
+  grid-template-rows: auto auto auto;
+  background:rgba(var(--bgelev2));
+  width:100%;
+  max-width:800px;
+  margin:10px auto;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+vbingo1 name, vbingo1 points {
+  padding:30px;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  background:linear-gradient(to right, var(--pastelgradient1));
+  font:800 20px var(--sans);
+}
+
+vbingo1 name span, vbingo1 points span {
+  border-bottom:2px solid var(--fontaccent1);
+}
+
+vbingo1 .bingo-card {
+  position:relative;
+  padding:20px;
+  display:grid;
+  grid-template-rows: repeat(5,150px);
+  grid-template-columns: repeat(5,auto);
+  grid-gap:10px;
+}
+
+vbingo1 .bingo-card a {
+  background:rgba(var(--bgelev1));
+  display:flex;
+  flex-flow:row;
+  justify-content: center;
+  align-items: center;
+  font:600 11px var(--sans);
+  text-transform:uppercase;
+  border-radius:10px;
+}
+
+vbingo1 .bingo-card a.complete {
+  background:linear-gradient(to bottom left, var(--pastelgradient1));
+}
