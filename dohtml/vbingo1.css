@@ -2,7 +2,7 @@ vbingo1 {
   position:relative;
   display:grid;
   grid-template-rows: auto auto auto;
-  background:rgba(var(--bgelev2));
+  background:rgba(var(--bgelev3));
   width:100%;
   max-width:800px;
   margin:10px auto;
