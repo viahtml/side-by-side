@@ -1,0 +1,114 @@
+vthread5 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "top top"
+    "left right";
+  grid-template-columns: auto 200px;
+  grid-template-rows: 50px auto;
+  margin:10px auto;
+  width:590px;
+  height:500px;
+  font-family: var(--sans1);
+  line-height:150%;
+  background:rgba(var(--bgelev1));
+  border-radius:20px;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vthread5 top {
+  grid-area:top;
+  display:flex;
+  flex-flow:row;
+  justify-content: flex-start;
+  align-items: center;
+  padding:20px;
+  width:100%;
+  background:linear-gradient(to right, var(--pastelgradient1));
+}
+
+vthread5 top circle {
+  width:15px;
+  height:15px;
+  border-radius:100%;
+  background:rgba(var(--bgelev3));
+}
+
+vthread5 top line {
+  margin-left:10px;
+  width:100%;
+  height:15px;
+  border-radius:20px;
+  background:rgba(var(--bgelev3));
+}
+
+vthread5 left {
+  grid-area:left;
+}
+
+vthread5 left .writing {
+  padding:40px;
+  height:500px;
+  background:rgba(var(--bgelev3));
+}
+
+vthread5 left .writing overflow {
+  max-height:350px;
+  overflow:auto;
+}
+
+vthread5 p {
+  text-indent: 15px;
+}
+
+vthread5 u, vthread5 a {
+  font:800 17px var(--outline);
+  text-transform:lowercase;
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent1);
+}
+
+vthread5 b, vthread5 p::first-letter {
+  font:800 18px var(--sans1);
+  color:var(--fontaccent3);
+}
+
+vthread5 i {
+  color:var(--fontaccent2);
+}
+
+vthread5 right {
+  grid-area: right;
+}
+
+vthread5 right img {
+  margin:20px -20px 0;
+  width:200px;
+  height:250px;
+  border-radius:10px;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+}
+
+vthread5 right tag {
+  display:flex;
+  flex-flow:column;
+  align-items: flex-end;
+  text-align:right;
+  margin-right:20px;
+}
+
+vthread5 right tag i {
+  margin:10px 0;
+  font-size:30px;
+  padding:10px;
+  border-radius:100%;
+  aspect-ratio:1 / 1;
+  background:rgba(var(--bgelev3));
+}
+
+vthread5 right tag a {
+  margin-top:10px;
+  font-size:30px;
+  color:var(--fontaccent2)!important;
+}
