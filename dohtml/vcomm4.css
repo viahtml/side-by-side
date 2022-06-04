@@ -1,0 +1,137 @@
+vcomm4 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "coloricons"
+    "contact"
+    "msgs"
+    "sendermenu";
+  grid-template-rows: auto auto auto auto;
+  grid-gap:20px;
+  width:360px;
+  margin:30px auto;
+  padding:20px;
+  font-size:14px;
+  font-weight:300;
+  font-family: var(--sans1);
+  background:rgba(var(--bgelev1));
+  border-radius:20px;
+  box-shadow: 0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vcomm4 coloricons {
+  grid-area:coloricons;
+  display:flex;
+  flex-flow:column;
+  justify-content: space-around;
+}
+
+vcomm4 colorline {
+  width:100%;
+  height:10px;
+  background:linear-gradient(to right, var(--pastelgradient1));
+  border-radius:20px;
+}
+
+vcomm4 coloricons color-icons {
+  margin:20px 0;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+vcomm4 coloricons color-icons i {
+  font-size:17px;
+}
+
+vcomm4 contact {
+  grid-area:contact;
+  display:flex;
+  font:300 15px var(--sans1);
+}
+
+vcomm4 contact contact-name {
+  font: 400 40px var(--outline);
+  color:var(--fontaccent1);
+  text-transform: lowercase;
+}
+
+vcomm4 contact contact-name::before {
+  content: 'connected to';
+  display:block;
+  margin-bottom:-10px;
+  font:300 11px var(--sans1);
+  color:rgba(var(--font));
+  text-transform:uppercase;
+}
+
+vcomm4 .msgs, vcomm4 .call {
+  grid-area:msgs;
+  position:relative;
+  padding:20px;
+  background:linear-gradient(to bottom right, var(--pastelgradient1));
+  border-radius:20px;
+}
+
+vcomm4 .msgs overflow, vcomm4 .call overflow {
+  display:block;
+  max-height:400px;
+  overflow:auto;
+}
+
+vcomm4 .msgs p {
+  float:left;
+  clear:both;
+  margin:3px;
+  padding:10px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vcomm4 .msgs note, vcomm4 .call note {
+  margin:10px auto;
+  text-align:center;
+  display:block;
+  clear:both;
+  text-transform:uppercase;
+  font:500 10px var(--sans1);
+}
+
+vcomm4 .call p {
+  margin:5px 0;
+  width:100%;
+  padding:10px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vcomm4 .msgs u, vcomm4 .msgs a, vcomm4 .call u, vcomm4 .call a {
+  font:800 17px var(--outline);
+  text-transform:lowercase;
+  text-decoration: underline;
+  text-decoration-color: var(--fontaccent1);
+}
+
+vcomm4 .msgs b, vcomm4 .call b {
+  font:800 15px var(--sans1);
+  color:var(--fontaccent3);
+}
+
+vcomm4 .msgs i, vcomm4 .call i {
+  color:var(--fontaccent2);
+}
+
+vcomm4 sendermenu {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+vcomm4 sendermenu img {
+  width:50px;
+  height:50px;
+  border-radius:10px;
+}
