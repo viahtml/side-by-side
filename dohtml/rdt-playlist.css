@@ -1,0 +1,123 @@
+rdt-playlist {
+  position:relative;
+  display:grid;
+  grid-template-rows: 100px auto;
+  margin:30px auto;
+  width:600px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+  overflow:hidden;
+}
+
+rdt-playlist rdtp-top {
+  display:flex;
+  flex-flow:row;
+  justify-content: flex-start;
+  align-items: center;
+  padding:0 20px;
+  font:30px var(--display);
+  background: rgba(var(--bgelev1)) linear-gradient(to right, var(--pastelgradient2));
+}
+
+
+rdt-playlist rdtp-top::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: rgba(var(--bgelev1)) linear-gradient(to right, var(--pastelgradient2));
+}
+
+rdt-playlist rdtp-top span {
+border-bottom:3px solid rgba(var(--bgelev1));
+}
+
+rdt-playlist .rdtp-content {
+  padding:30px;
+}
+
+rdt-playlist .rdtp-content .playlist {
+  display:grid;
+  grid-template-areas:
+    "pl-title"
+    "pl-prompt"
+    "songs";
+  background:rgba(var(--bgelev2));
+  padding:30px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+rdt-playlist .rdtp-content .playlist pl-title {
+  text-align:center;
+  font:25px var(--display);
+  text-transform:lowercase;
+color:var(--fontaccent1);
+}
+
+rdt-playlist .rdtp-content .playlist pl-prompt {
+  text-align:center;
+  font:15px var(--sans);
+  text-transform:uppercase;
+}
+
+rdt-playlist .rdtp-content .playlist .songs {
+  margin-top:20px;
+  display:grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, 150px);
+  grid-gap:10px;
+}
+
+.songs song {
+  position:relative;
+  width:150px;
+  height:150px;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.songs song scr {
+  position:absolute;
+  display:block;
+  width:150px;
+  height:150px;
+  background: rgba(var(--bgelev1)) linear-gradient(to bottom right, var(--pastelgradient1));
+  opacity:0.7;
+}
+
+.songs song st {
+  position:relative;
+  font:600 20px var(--sans);
+  text-transform: lowercase;
+  z-index:2;
+}
+
+.songs song artist {
+  position:relative;
+  font:10px var(--sans);
+  text-transform: uppercase;
+  z-index:2;
+}
+
+.songs song a {
+  position:absolute;
+  display:block;
+  right:-10px;
+  bottom:-15px;
+  z-index:2;
+  font-size:60px;
+}
+
+.songs song:hover scr {
+opacity:0;
+transition:0.3s ease;
+}
