@@ -155,3 +155,21 @@ vreq3-inside vreq3-request .description {
 vreq3-inside vreq3-request .description overflow {
   max-height:150px;
 }
+
+vreq3 b {
+  color:var(--fontaccent1);
+}
+
+vreq3 i {
+  color:var(--fontaccent2);
+}
+
+vreq3 u {
+  font:18px var(--display);
+  text-decoration-color:var(--fontaccent3);
+}
+
+vreq3 a {
+  text-decoration:underline;
+  text-decoration-color:var(--fontaccent1);
+}
