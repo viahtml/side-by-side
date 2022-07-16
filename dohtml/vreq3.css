@@ -1,0 +1,157 @@
+vreq3 {
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:800px;
+  margin:10px auto;
+  padding:10px;
+  font:14px/150% var(--sans);
+  background:rgba(var(--bgelev1),1);
+  border-radius:10px;
+  text-align:justify;
+}
+
+vreq3-inside {
+  display:grid;
+  grid-template-areas:
+    "request characters";
+  grid-template-columns: auto 50%;
+  background:linear-gradient(to right, var(--pastelgradient1));
+  border-radius:10px;
+  overflow:hidden;
+}
+
+vreq3-inside vreq3-characters {
+  grid-area:characters;
+  margin:20px 20px 20px 0;
+  padding:0 20px;
+  background:rgba(var(--bgelev1),1);
+  border-top:20px solid transparent;
+  border-bottom:20px solid transparent;
+  border-radius:10px;
+  overflow:auto;
+}
+
+vreq3-inside vreq3-characters overflow {
+  max-height:500px;
+}
+
+vreq3-inside vreq3-characters character {
+  margin-bottom:10px;
+  display:grid;
+  grid-template-columns: minmax(auto, 80px) auto;
+  grid-gap:10px;
+  padding:20px;
+  background:rgba(var(--bgelev3),1);
+  border-radius:10px;
+}
+
+vreq3-inside vreq3-characters character:last-of-type {
+  margin-bottom:0;
+}
+
+vreq3-characters character img {
+  width:60px;
+  height:60px;
+  border-radius:10px;
+}
+
+vreq3-characters character character-details {
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+vreq3-characters character character-details name {
+  font: 20px var(--display);
+  text-transform: lowercase;
+}
+
+vreq3-characters character character-details name span {
+  background:linear-gradient(to left, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vreq3-characters character character-details rel {
+  font:500 10px var(--sans);
+  text-transform: uppercase;
+}
+
+vreq3-characters character character-span {
+  grid-column: 1 / -1;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+}
+
+vreq3-characters character character-span span {
+  background:rgba(var(--bgelev1),1);
+  font:600 10px var(--sans);
+  text-transform: uppercase;
+  padding:7px;
+  border-radius:5px;
+  margin:5px;
+  flex-grow:1;
+  text-align:center;
+}
+
+vreq3-characters character .description {
+  grid-column: 1 / -1;
+}
+
+vreq3-characters character .description overflow {
+  max-height:100px;
+}
+
+vreq3-inside vreq3-request {
+  grid-area:request;
+  display:flex;
+  flex-flow:column;
+  justify-content:center;
+  align-items: center;
+}
+
+vreq3-inside vreq3-request img {;
+  margin:30px;
+  width:300px;
+  height:140px;
+  border-radius:10px;
+}
+
+vreq3-inside vreq3-request reqtitle {
+  font: 30px var(--display);
+  text-transform: lowercase;
+  border-bottom:3px solid rgba(var(--bgelev1),1);
+}
+
+vreq3-inside vreq3-request reqsub {
+  margin:10px 0;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+vreq3-inside vreq3-request reqsub span {
+  background:rgba(var(--bgelev1),1);
+  font:600 10px var(--sans);
+  text-transform: uppercase;
+  padding:7px;
+  border-radius:5px;
+  margin:5px;
+}
+
+vreq3-inside vreq3-request .description {
+  margin:0 20px 20px;
+  padding:0 20px;
+  border-top:20px solid transparent;
+  border-bottom:20px solid transparent;
+  background:rgba(var(--bgelev1),1);
+  border-radius:10px;
+}
+
+vreq3-inside vreq3-request .description overflow {
+  max-height:150px;
+}
