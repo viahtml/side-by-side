@@ -154,3 +154,67 @@ vdev1 vdev1-color .vdev1 img.two {
 vdev1 vdev1-color .vdev1 img.three {
   width:32%;
 }
+
+vdev1 vdev1-color .vdev1 .songs {
+  margin-top:20px;
+  display:grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, 180px);
+  grid-gap:10px;
+}
+
+vdev1 vdev1-color .vdev1 song {
+  position:relative;
+  width:180px;
+  height:180px;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+vdev1 vdev1-color .vdev1 .songs song scr {
+  position:absolute;
+  display:block;
+  width:180px;
+  height:180px;
+  background: rgba(var(--bgelev1)) linear-gradient(to bottom right, var(--pastelgradient1));
+  opacity:0.7;
+}
+
+vdev1 vdev1-color .vdev1 .songs song st {
+  position:relative;
+  font:600 20px var(--sans);
+  text-transform: lowercase;
+  z-index:2;
+}
+
+vdev1 vdev1-color .vdev1 .songs song artist {
+  position:relative;
+  font:10px var(--sans);
+  text-transform: uppercase;
+  z-index:2;
+}
+
+vdev1 vdev1-color .vdev1 .songs song a {
+  position:absolute;
+  display:block;
+  right:-10px;
+  bottom:-15px;
+  z-index:2;
+
+}
+
+vdev1 vdev1-color .vdev1 .songs song i {
+  font-family:"Font Awesome 6 Pro";
+font-style:normal;
+  font-size:100px!important;
+}
+
+vdev1 vdev1-color .vdev1 .songs song:hover scr {
+opacity:0;
+transition:0.3s ease;
+}
