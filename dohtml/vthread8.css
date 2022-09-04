@@ -1,0 +1,113 @@
+vthread8 {
+  position:relative;
+  display:grid;
+  grid-template-rows:50px auto 50px;
+  margin:30px auto;
+  width:400px;
+  height:auto;
+  text-align: justify;
+  background:rgba(var(--bgelev1));
+  background-image:linear-gradient(to bottom, var(--pastelgradient1));
+  background-blend-mode: var(--blendmode);
+  border-radius:15px;
+  border:1px solid rgba(var(--bgelev1));
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.15);
+  overflow:hidden;
+}
+
+vthread8 whiteblock.top {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20px;
+  background:rgba(var(--bgelev2));
+  border-bottom:1px solid rgba(var(--bgelev1));
+}
+
+vthread8 whiteblock.bottom {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20px;
+  background:rgba(var(--bgelev2));
+  border-top:1px solid rgba(var(--bgelev1));
+}
+
+vthread8 whiteblock.top i {
+  font-size: 25px;
+  color:var(--fontaccent1);
+}
+
+vthread8 whiteblock.bottom i {
+  font-size: 15px;
+  color:var(--fontaccent2);
+}
+
+vthread8 whiteblock.bottom a {
+  font:17px var(--display);
+}
+
+vthread8 whiteblock.bottom span {
+  background:linear-gradient(to right, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vthread8 .writing {
+  margin:0 40px;
+  padding:30px;
+  background:rgba(var(--bgelev1));
+  line-height:140%;
+}
+
+vthread8 .writing overflow {
+  display:block;
+  max-height:200px;
+  overflow:auto;
+}
+
+vthread8 .writing b {
+  font:800 18px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vthread8 .writing i {
+  font:600 italic 14px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vthread8 .writing u {
+  font:18px var(--display);
+  text-decoration-color:var(--fontaccent3);
+}
+
+vthread8 .writing a {
+  font:600 11px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:2.25px;
+  color:var(--fontaccent2);
+}
+
+vthread8 img {
+  display:block;
+  border-radius:10px;
+  margin:10px auto 30px;
+}
+
+vthread8 img.rectangle {
+  width:250px;
+  height:auto;
+}
+
+vthread8 img.circle {
+  width:100px;
+  height:100px;
+  border-radius:100%;
+}
+
+vthread8 img.square {
+  width:100px;
+  height:100px;
+}
