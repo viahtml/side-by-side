@@ -64,6 +64,12 @@ vthread9-left tag span {
   line-height:150%;
 }
 
+.vthread9-right.alternate {
+  background:rgba(var(--bgelev1));
+  padding:30px;
+  border-radius:10px;
+}
+
 .vthread9-right b {
   font:800 18px var(--sans);
   background:linear-gradient(to right, var(--fontgradient));
