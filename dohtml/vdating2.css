@@ -1,0 +1,328 @@
+vdating2 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "mobile-controls"
+    "wildside-controls"
+    "messages"
+    "wildside-content"
+    "wildside-buttons";
+  grid-template-rows: 50px 70px 100px 500px 70px;
+  margin:20px auto;
+  width:400px;
+  background:rgba(var(--bgelev1));
+  border-radius:20px;
+  border:1px solid rgba(var(--shadow),0.1);
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vdating2 mobile-controls {
+  grid-area:mobile-controls;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  text-transform:uppercase;
+  font:800 10px var(--sans);
+  color:var(--fontaccent1);
+  border-bottom:1px solid rgba(var(--shadow),0.1);
+}
+
+vdating2 mobile-controls i {
+  font-size:12px;
+  color:var(--fontaccent3);
+  margin-right:5px;
+}
+
+vdating2 wildside-controls {
+  grid-area:wildside-controls;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20px;
+  text-transform:lowercase;
+}
+
+vdating2 wildside-controls ws {
+  font:27px var(--display);
+}
+
+vdating2 wildside-controls ws span {
+  background:linear-gradient(to left, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vdating2 wildside-controls i {
+  font-size:20px;
+  color:var(--fontaccent2);
+  margin-right:5px;
+}
+
+vdating2 messages {
+  grid-area:messages;
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+vdating2 messages::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(var(--bgelev1)) linear-gradient(to right, var(--pastelgradient2));
+}
+
+vdating2 messages::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(var(--bgelev1)) linear-gradient(to right, var(--pastelgradient2));
+}
+
+vdating2 messages msg {
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+}
+
+vdating2 messages msg msg-img {
+  position:relative;
+}
+
+vdating2 messages msg msg-img i.fa-solid {
+  position:absolute;
+  top:0;
+  right:0;
+  font-size:15px;
+  color:rgba(var(--bgelev2));
+  background:var(--fontaccent2);
+  padding:5px;
+  border-radius:100%;
+  z-index:2;
+}
+
+vdating2 messages msg img {
+  width:70px;
+  height:70px;
+  border-radius:100%;
+  margin-bottom:10px;
+}
+
+vdating2 messages msg img.start {
+  border:5px solid var(--fontaccent2);
+}
+
+vdating2 messages msg x {
+  font:600 9px var(--sans);
+  text-transform: uppercase;
+  color:var(--fontaccent1);
+}
+
+vdating2 wildside-content {
+  grid-area:wildside-content;
+  margin-top:10px;
+  display:flex;
+  flex-flow:row;
+  align-items: flex-end;
+}
+
+vdating2 wildside-content .wildside-content {
+  width:100%;
+  padding:30px;
+  height:100px;
+  background:hsl(var(--mghue1), calc(var(--mgsat1) + var(--pastelpercent)), calc(var(--lightness1) + var(--mglight1) + var(--darken)));
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.35);
+  overflow:hidden;
+  transition: ease 0.3s;
+}
+
+vdating2 wildside-content .wildside-content .inside {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+vdating2 wildside-content .wildside-content .inside wildside-name {
+  display:flex;
+  flex-flow:column;
+  justify-content: space-between;
+}
+
+vdating2 wildside-content .wildside-content .inside wildside-name name {
+  color:var(--fontaccent1);
+  font:25px var(--display);
+  text-transform: lowercase;
+}
+
+vdating2 wildside-content .wildside-content .inside wildside-name occ {
+  font:600 12px var(--sans);
+  text-transform: uppercase;
+}
+
+vdating2 wildside-content .wildside-content .inside pron {
+  background:hsl(var(--mghue2), calc(var(--mgsat2) + var(--pastelpercent)), calc(var(--lightness1) + var(--mglight1) + var(--darken)));
+  padding:10px;
+  font:800 10px var(--sans);
+  text-transform: uppercase;
+  border-radius:5px;
+}
+
+vdating2 wildside-content .wildside-content:hover {
+  height:490px;
+  transition: ease 0.3s;
+}
+
+vdating2 wildside-content .wildside-content .about-desc {
+  margin-top:30px;
+  font-size:14px;
+  line-height:140%;
+  padding:0px 20px 0px 0px;
+  height:350px;
+}
+
+vdating2 wildside-content .wildside-content:hover .about-desc {
+  display:block;
+  overflow:auto;
+}
+
+vdating2 wildside-content .wildside-content .about-desc b {
+  font:800 18px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vdating2 wildside-content .wildside-content .about-desc i {
+  font:600 italic 14px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vdating2 wildside-content .wildside-content .about-desc u {
+  font:18px var(--display);
+  text-decoration-color:var(--fontaccent3);
+}
+
+vdating2 wildside-content .wildside-content .about-desc a {
+  font:600 11px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:2.25px;
+  color:var(--fontaccent2);
+}
+
+vdating2 wildside-buttons {
+  grid-area:wildside-buttons;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 30px;
+  font-size:20px;
+}
+
+vdating2 wildside-buttons i {
+  color:var(--fontaccent3);
+}
+
+vdating2-swipe {
+  position:relative;
+  display:grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: auto 50px;
+  margin:20px auto;
+  width:400px;
+  background:rgba(var(--bgelev1));
+  border-radius:20px;
+  border:1px solid rgba(var(--shadow),0.1);
+  box-shadow:0 0 10px 0 rgba(var(--shadow),0.25);
+  overflow:hidden;
+}
+
+vdating2-swipe img {
+  width:100px;
+  height:100px;
+}
+
+vdating2-swipe swipe {
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+}
+
+vdating2-swipe swipe name {
+  color:var(--fontaccent1);
+  font:25px var(--display);
+  text-transform: lowercase;
+}
+
+vdating2-swipe name-details x {
+  font:600 10px var(--sans);
+  text-transform: uppercase;
+}
+
+vdating2-swipe.swipe-right name-details x::before {
+  content:"just swiped right on you!";
+}
+
+vdating2-swipe.swipe-left name-details x::before {
+  content:"just swiped left on you!";
+}
+
+vdating2-swipe.swipe-superlike name-details x::before {
+  content:"just super liked you!";
+}
+
+vdating2-swipe.swipe-match name-details x::before {
+  content:"just matched with you!";
+}
+
+vdating2-swipe convo-button {
+  grid-column: 1 / -1;
+  display:flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  text-align:center;
+  text-transform:uppercase;
+  font:600 13px var(--sans);
+  background:rgba(var(--bgelev2));
+  border-top:1px solid rgba(var(--shadow),0.1);
+  border-radius:5px;
+}
+
+vdating2-swipe convo-button span {
+  background:linear-gradient(to left, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vdating2-swipe convo-button span:hover {
+  background:linear-gradient(to right, var(--fontgradient));
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,0);
+}
+
+vdating2-swipe.swipe-right convo-button a span::before,
+vdating2-swipe.swipe-left convo-button a span::before,
+vdating2-swipe.swipe-superlike convo-button a span::before {
+ content: "view their profile!";
+}
+
+vdating2-swipe.swipe-match convo-button a span::before {
+  content: "start a message now!";
+}
