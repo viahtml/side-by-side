@@ -1,0 +1,115 @@
+vthread10 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "image quote"
+    "image writing"
+    "tag writing";
+  grid-template-rows: 100px 400px 100px;
+  grid-template-columns: 300px 450px;
+  max-width:750px;
+  margin:30px auto;
+  background:rgba(var(--bgelev1));
+  border:1px solid rgba(var(--border));
+  border-radius:20px;
+  overflow:hidden;
+}
+
+vthread10 vthread10-image {
+  grid-area:image;
+  width:300px;
+  height:500px;
+  padding:30px;
+  background:linear-gradient(to bottom right, var(--pastelgradient1));
+  border-right:1px solid rgba(var(--border));
+}
+
+vthread10 img {
+  width:240px;
+  height:450px;
+  border-radius:20px;
+}
+
+vthread10 tag {
+  grid-area:tag;
+  display:flex;
+  flex-flow:row;
+  justify-content: center;
+  align-items: center;
+  background:rgba(var(--bgelev2));
+  border-top:1px solid rgba(var(--border));
+  border-right:1px solid rgba(var(--border));
+}
+
+vthread10 tag tag-name {
+  padding:20px;
+  background:linear-gradient(to bottom right, var(--pastelgradient1));
+  border-radius:10px;
+  font:800 18px var(--display);
+}
+
+vthread10 quote {
+  grid-area:quote;
+  display:flex;
+  flex-flow:row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right:30px;
+  background:rgba(var(--bgelev2));
+  border-bottom:1px solid rgba(var(--border));
+}
+
+vthread10 quote quote-span {
+  padding:20px;
+  background:linear-gradient(to bottom right, var(--pastelgradient1));
+  border-radius:10px;
+  font:800 18px var(--display);
+}
+
+vthread10 .writing {
+  grid-area: writing;
+  font:400 15px/150% var(--sans);
+  padding:30px;
+  text-align:justify;
+}
+
+vthread10 .writing writing-body {
+  display:block;
+  padding:30px;
+  background:rgba(var(--bgelev3));
+  height:440px;
+  border-radius:20px;
+  border:1px solid rgba(var(--border));
+}
+
+vthread10 .writing overflow {
+  display:block;
+  max-height:380px;
+  overflow:auto;
+}
+
+vthread10 .writing b {
+  font:800 15px var(--sans);
+  background: linear-gradient(to right, var(--fontgradient));
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: left 1rem;
+}
+
+vthread10 .writing i {
+  font:600 italic 15px var(--sans);
+  color:var(--fontaccent3);
+}
+
+vthread10 .writing u {
+  font:13px var(--display);
+  color:var(--fontaccent1);
+  text-decoration-color:rgba(var(--font));
+}
+
+vthread10 .writing a {
+  font:600 11px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:2.25px;
+  color:var(--fontaccent2);
+}
