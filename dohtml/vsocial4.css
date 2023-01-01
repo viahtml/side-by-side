@@ -9,7 +9,7 @@ vsocial4 {
 
 vsocial4 vsocial4-left {
   position:sticky;
-  top:10px;
+  top:190px;
   align-self: start;
   display:grid;
   grid-template-rows:50px auto;
