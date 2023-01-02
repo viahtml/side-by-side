@@ -1,0 +1,161 @@
+vdev2-out {
+  position:relative;
+  display:block;
+  margin:10px auto;
+  background:rgba(var(--bgelev1));
+  width:550px;
+  border:1px solid rgba(var(--border));
+  border-radius:10px;
+}
+
+vdev2 {
+  position:relative;
+  display:grid;
+  grid-template-areas:
+    "top-name"
+    "main-content"
+    "bottom-tag";
+  grid-template-rows: auto auto auto;
+  margin:20px;
+  background:rgba(var(--bgelev3));
+  border:1px solid rgba(var(--border));
+  border-radius:10px;
+}
+
+vdev2 vdev2-top {
+  grid-column:1 / -1;
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  border-bottom:1px solid rgba(var(--border));
+}
+
+vdev2 top-name {
+  font:600 18px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vdev2 top-img {
+  justify-self: end;
+}
+
+vdev2 top-img img {
+  width:50px;
+  height:50px;
+  border-radius:10px;
+}
+
+vdev2-body {
+  grid-area: main-content;
+  padding:20px;
+}
+
+vdev2-body h1,
+vdev2-body h2,
+vdev2-body h3,
+vdev2-body h4,
+vdev2-body h5,
+vdev2-body h6 {
+  margin:0;
+  color:var(--fontaccent3);
+}
+
+vdev2-body b {
+  font:800 15px var(--sans);
+  color:var(--fontaccent1);
+}
+
+vdev2-body i {
+  font:400 italic 15px var(--sans);
+  color:var(--fontaccent2);
+}
+
+vdev2-body u {
+  font:400 italic 18px var(--sans);
+  text-decoration-color:var(--fontaccent2);
+}
+
+vdev2-body a {
+  font:500 11px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--fontaccent3);
+}
+
+vdev2-body blockquote {
+  margin:0;
+  padding:20px;
+  background:rgba(var(--bgelev1));
+  border-radius:10px;
+}
+
+vdev2 ol,
+vdev2 ul {
+  list-style-type: none;
+  padding:0;
+}
+
+vdev2 ol li {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-between;
+  align-items: center;
+  margin:5px;
+  padding:15px;
+  background:rgba(var(--bgelev2));
+  border-radius:5px;
+}
+
+vdev2 ul li {
+  margin:3px;
+  padding:15px;
+  background:rgba(var(--bgelev2));
+  border-radius:5px;
+}
+
+vdev2 quote {
+  display:block;
+  padding:3px;
+  font:500 25px var(--sans);
+  text-transform:uppercase;
+  border-bottom:2px solid var(--fontaccent1);
+}
+
+vdev2 quote::before {
+  content: '❝ ';
+  font-size:30px;
+  color:var(--fontaccent1);
+}
+
+vdev2 cite {
+  display:block;
+  text-align:right;
+  padding:5px;
+}
+
+vdev2 .vdev2-images {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+}
+
+vdev2 .vdev2-images img {
+  border-radius:10px;
+  margin:10px 0;
+}
+
+vdev2 .vdev2-images img.one {
+  width:100%;
+}
+
+vdev2 .vdev2-images img.two {
+  width:49%;
+}
+
+vdev2 .vdev2-images img.three {
+  width:32%;
+}
